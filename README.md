@@ -1,11 +1,12 @@
 # tasks-php-js
 
-##Zadanie 1 (PHP)
+## Zadanie 1 (PHP)
 
 Klawiatury starych telefonów komórkowych były wyłącznie numeryczne. Aby napisać za ich pomocą
 tekst należało naciskać dany klawisz numeryczny odpowiednią ilość razy, na przykład „ULA” zapisywało
 się jako 885552 (dwa naciśnięcia klawisza 8, trzy naciśnięcia klawisza 5, jedno naciśnięcia klawisza 2).
 Stwórz klasę PhoneKeyboardConverter zawierającą metody:
+
 1. convertToNumeric, umożliwiającą tłumaczenie łańcucha znaków na ciąg numeryczny
 zgodny z klawiaturą telefonu, kolejne „litery” oddzielone powinny być przecinkiem,
 2. convertToString , umożliwiającą tłumaczenie ciągu numerycznego zgodnego z klawiaturą
@@ -19,7 +20,7 @@ Metoda Dane wejściowe Zwrócone przez metodę
 convertToNumeric Ela nie ma kota 33,555,2,0,66,444,33,0,6,2,0,55,666,8,2
 convertToString 5,2,22,555,33,222,9999,66,444,55 jablecznik
 
-##Zadanie 2 (JavaScript)
+## Zadanie 2 (JavaScript)
 
 Podana jest struktura: tablica obiektów z danymi dotyczącymi osoby (nazwa użytkownika, rok
 urodzenia, pensja). Napisz funkcję welcomeUsers(array). Funkcja powinna przyjmować
