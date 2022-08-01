@@ -1,4 +1,4 @@
-# tasks-php-js
+# Zadania rekrutacyjne (Junior Web Developer PHP/JS)
 
 ## Zadanie 1 (PHP)
 
