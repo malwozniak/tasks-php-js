@@ -26,13 +26,18 @@ Podana jest struktura: tablica obiektów z danymi dotyczącymi osoby (nazwa uży
 urodzenia, pensja). Napisz funkcję welcomeUsers(array). Funkcja powinna przyjmować
 wspomnianą strukturę i dla każdego elementu tablicy wypisywać do konsoli programistycznej łańcuch
 znaków zależny od danych danego obiektu:
+
 •  Dla osób z pensją powyżej 15 000: Witaj, prezesie!
+
 •  Dla osób z pensją poniżej 5 000: <nazwa_użytkownika>, szykuj się na podwyżkę!
+
 •  Dla osób z parzystym rokiem urodzenia: Witaj, <nazwa_użytkownika>! W tym roku
 kończysz <obliczony_wiek_rocznikowy> lat!
+
 •  Dla osób z nieparzystym rokiem urodzenia: <nazwa_użytkownika>, jesteś zwolniony!
 Warunki na wysokość pensji mają być sprawdzane przed warunkami na rok urodzenia.
 obliczony_wiek_rocznikowy to różnica pomiędzy bieżącym rokiem, a rokiem urodzenia.
+
 
 Przykładowa struktura wejściowa i łańcuchy utworzone za jej pomocą:
 
