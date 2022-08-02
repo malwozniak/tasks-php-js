@@ -24,73 +24,41 @@ class PhoneKeyboardConverter {
       $n = strlen($string);
       echo  $string. ' ';
       for ($i = 0; $i < $n; $i++)
-      {
-         
-          if ($string[$i] == ' ')
-          {
-            $string[$i] = '0';
-            $output = $output . $string[$i];
-          
-          }
-          else 
-          {    
-            if(ctype_lower($string[$i])){
-                
-               $position = ord($string[$i]) - ord('a');
-               $output = $output . $arr[$position] ;
-            }
-            else{
-              $position = ord($string[$i]) - ord('A');
-               $output = $output . $arr[$position] ;
-            }
-            
-          }
-          $output = $output . ',';
-          
+      {         
+         $output = ( $string[$i] == ' ') ?  $output . '0' : (ctype_lower($string[$i]) ? $output . $arr[ord($string[$i]) - ord('a')] : $output . $arr[ord($string[$i]) - ord('A')] );     
+         $output .= ',';  
          }
          $output = rtrim($output, ',');
          return $output;
     }
     static function convertToString(&$arr, $string)
     {
-      
       $str_arr = preg_split ("/\,/", $string); 
-      //print_r($string);
       $alphachar = array_combine($arr, range('a', 'z'));
-      $n = count($str_arr);
+      //$n = count($str_arr);
       echo  $string. ' ';
-      
-      for ($i = 0; $i < $n; $i++)
+      // I sposób - lepszy
+      foreach($str_arr as $key => $value)
       {
-//echo $str_arr[$i];
-//echo $str_arr[$i];
-        if($str_arr[$i] ){
-        //echo $str_arr[$i];
-        echo $alphachar[$str_arr[$i]] ;
-        }
-        else {
-          echo " ";
-        }
-       
+
+        echo ($value) ?  $alphachar[$value] : " " ;
       }
-      //print_r($alphachar);
-      
-
-         // echo $array_values($str_arr);
-        
-      
-       
-
+      // II sposób
+      // for ($i = 0; $i < $n; $i++)
+      // {
     
-  }
+      //   print ($str_arr[$i]) ?  $alphachar[$str_arr[$i]] : " " ;
+      // }
+     }
 }
 
 
-#Wywołanie w konsoli
+# Wywołanie w konsoli
 $selectNumber = new PhoneKeyboardConverter();
 $str = array( "2", "22", "222", "3", "33", "333", "4", "44", "444", "5", "55", "555", "6", "66", "666", "7", "77", "777", "7777", "8", "88", "888", "9", "99", "999", "9999"
 );
-
+# $input = readline('Wpisz zdanie: ');
+# $input1 = readline('Wpisz cyfry: ');
 $input = "Ela nie ma kota";
 $input1 = "5,2,22,555,33,222,9999,66,444,55";
 echo PhoneKeyboardConverter::convertToNumberic($str, $input),"\n";

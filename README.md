@@ -16,9 +16,9 @@ przetłumaczony ciąg. Klasa może zawierać dowolne inne zmienne/metody, które
 niezbędne bądź pomocne przy wykonaniu zadania.
 
 Przykładowe dane wejściowe i oczekiwane rezultaty:
-Metoda Dane wejściowe Zwrócone przez metodę
-convertToNumeric Ela nie ma kota 33,555,2,0,66,444,33,0,6,2,0,55,666,8,2
-convertToString 5,2,22,555,33,222,9999,66,444,55 jablecznik
+Metoda Dane wejściowe Zwrócone przez metodę  
+convertToNumeric Ela nie ma kota 33,555,2,0,66,444,33,0,6,2,0,55,666,8,2  
+convertToString 5,2,22,555,33,222,9999,66,444,55 jablecznik  
 
 ## Zadanie 2 (JavaScript)
 

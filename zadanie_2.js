@@ -55,28 +55,33 @@ var usersArr = [
         let salary = array.map(a => a.salary);
         let birth = array.map(a => a.birthYear);
         const numberDate = new Date().getFullYear();
-           
-        for( let key in salary )
-        {
-            if ( salary[key] > 15000 )
+        try {
+            for( let key in salary )
             {
-        
-                console.log('Witaj, prezesie!');
+                if ( salary[key] > 15000 )
+                {
+            
+                    console.log('Witaj, prezesie!');
 
+                }
+                else if ( salary[key] < 5000 )
+                {
+
+                    console.log(`${name[key]}, szykuj się na podwyżkę!`);
+
+                }
+                else
+                {
+                    var obliczony_wiek_rocznikowy =  numberDate - birth[key];
+                    const result = ( birth[key] %2 == 0) ?  `Witaj, ${name[key]}! W tym roku kończysz ${obliczony_wiek_rocznikowy} lat!` : `${name[key]}! Jesteś zwolniony!`;
+                    console.log(result);           
+
+                }
             }
-            else if ( salary[key] < 5000 )
-            {
-
-                console.log(`${name[key]}, szykuj się na podwyżkę!`);
-
-            }
-            else
-            {
-                var obliczony_wiek_rocznikowy =  numberDate - birth[key];
-                const result = ( birth[key] %2 == 0) ?  `Witaj, ${name[key]}! W tym roku kończysz ${obliczony_wiek_rocznikowy} lat!` : `${name[key]}! Jesteś zwolniony!`;
-                console.log(result);           
-
-            }
+         }
+         catch (error) {
+                console.error(error);
+  
         }
     }
 
